@@ -1,72 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
-    <title>Tri | Dev Portfolio</title>
+    <title>Tri | CS Student & Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- particles bg -->
     <canvas id="particles"></canvas>
+    <div class="overlay"></div>
 
-    <!-- Navbar -->
     <nav>
-        <div class="logo">Tri<span>.</span></div>
-        <ul>
+        <div class="logo">Tri<span class="dot">.</span>_Dev</div>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="btn-cv">Download CV <i class="fas fa-download"></i></a></li>
         </ul>
     </nav>
 
-    <!-- Hero -->
     <section id="hero">
-        <h1 class="reveal">Hi, I’m <span>Tri</span></h1>
-        <p class="reveal">Creative Developer & Freelancer</p>
-        <a href="#projects" class="btn">My Work</a>
-    </section>
+        <div class="hero-content">
+            <h1 class="reveal">I'm <span class="gradient-text">Tri</span></h1>
+            <h2 class="reveal">I am a <span class="typewriter"></span></h2>
+            <p class="reveal">Final-year CS student. Passionate about building performant Web & Desktop Applications.
+            </p>
 
-    <!-- About -->
-    <section id="about" class="content">
-        <h2>About Me</h2>
-        <p>I build interactive, modern, and high-performance web apps with beautiful animation.</p>
-    </section>
+            <div class="social-icons reveal">
+                <a href="https://github.com/tribeti" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tribeti/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:your_email@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
 
-    <!-- Skills -->
-    <section id="skills" class="content">
-        <h2>Skills</h2>
-        <div class="grid">
-            <div class="card">HTML / CSS / JS</div>
-            <div class="card">React / Next.js</div>
-            <div class="card">Node / API</div>
-            <div class="card">UX / UI Design</div>
+            <a href="#about" class="btn reveal">Explore My World</a>
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="content">
-        <h2>Featured Projects</h2>
-        <div class="grid">
-            <div class="card project">Portfolio Site</div>
-            <div class="card project">Ecommerce Shop</div>
-            <div class="card project">Dashboard UI</div>
+    <section id="about" class="content section-hidden">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>
+                    Tôi là sinh viên năm cuối Khoa học Máy tính, chuyên sâu về phát triển ứng dụng Full-stack và Desktop
+                    cross-platform.
+                    Tôi thích biến những ý tưởng thành sản phẩm thực tế — dù đó là một trải nghiệm web mượt mà hay một
+                    công cụ desktop mạnh mẽ.
+                </p>
+                <p style="margin-top: 15px; color: #a1a1aa;">
+                    <i class="fas fa-bolt" style="color: var(--accent);"></i> Currently preparing for full-time
+                    internship/job opportunities in 2026.
+                </p>
+            </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="content">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="">..</a></p>
+    <section id="skills" class="content section-hidden">
+        <h2 class="section-title">Tech <span>Stack</span></h2>
+
+        <h3 style="text-align: center; margin-bottom: 20px; color: #fff;">Web Development</h3>
+        <div class="skills-grid">
+            <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill-item"><i class="fab fa-react"></i> React / TS</div>
+            <div class="skill-item"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="skill-item"><i class="fas fa-server"></i> Express.js</div>
+        </div>
+
+        <h3 style="text-align: center; margin: 40px 0 20px; color: #fff;">Desktop & Tools</h3>
+        <div class="skills-grid">
+            <div class="skill-item"><i class="fas fa-code"></i> C# / .NET</div>
+            <div class="skill-item"><i class="fab fa-windows"></i> WinUI</div>
+            <div class="skill-item"><i class="fab fa-git-alt"></i> Git / GitHub</div>
+            <div class="skill-item"><i class="fab fa-linux"></i> Linux</div>
+            <div class="skill-item"><i class="fas fa-laptop-code"></i> VS 2026 / Zed</div>
+        </div>
     </section>
 
-    <footer>© 2026 Tri</footer>
+    <section id="projects" class="content section-hidden">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="grid">
+            <div class="card project-card">
+                <div class="card-icon"><i class="fas fa-globe"></i></div>
+                <h3>Web Project</h3>
+                <p>Full-stack web application built with React and Node.js.</p>
+                <div class="tags">
+                    <span>React</span><span>Express</span><span>MongoDB</span>
+                </div>
+                <div class="links">
+                    <a href="https://github.com/tribeti" target="_blank"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="card-icon"><i class="fas fa-desktop"></i></div>
+                <h3>Desktop Tool</h3>
+                <p>High-performance desktop utility app using WinUI 3.</p>
+                <div class="tags">
+                    <span>C#</span><span>.NET</span><span>WinUI</span>
+                </div>
+                <div class="links">
+                    <a href="https://github.com/tribeti" target="_blank"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content section-hidden">
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <div class="contact-container">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <p>Open for opportunities in 2026.</p>
+                <p>Email: <a href="mailto:contact@tribeti.dev" style="color: var(--accent);">contact@tribeti.dev</a></p>
+            </div>
+            <form class="contact-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <textarea placeholder="Message..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Tri (tribeti). Built with passion.</p>
+    </footer>
 
     <script src="app.js"></script>
 </body>
